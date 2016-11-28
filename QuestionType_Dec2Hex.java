@@ -42,8 +42,8 @@ public class QuestionType_Dec2Hex
     return decimal;
   }
   
-  /** ------------------------------------------------------------
-    * Gives the hexadecimal representation of the decimal number stored in the question.
+  // ------------------------------------------------------------
+  /** Gives the hexadecimal representation of the decimal number stored in the question.
     * @return a hexadecimal equivalent of the decimal number.
     */
   public String convertDec2Hex ()
@@ -79,8 +79,8 @@ public class QuestionType_Dec2Hex
       question.setQuestion();
       System.out.println ("Convert to hexadecimal: " + question.getDecimal());
       
-      System.out.print ("<ENTER> for Answer and next question, \'q\' to quit. : ");
-      user = keyboard.nextLine();
+      System.out.print ("Any character for Answer and next question, \'q\' to quit. : ");
+      user = keyboard.nextLine() + " ";
       
       System.out.println ("Decimal equivalent: " + question.convertDec2Hex());
     }

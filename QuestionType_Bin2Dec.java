@@ -82,8 +82,8 @@ public class QuestionType_Bin2Dec
       question.setQuestion();
       System.out.println ("Convert to decimal: " + question.getBinary());
       
-      System.out.print ("<ENTER> for Answer and next question, \'q\' to quit. : ");
-      user = keyboard.nextLine();
+      System.out.print ("Any character for Answer and next question, \'q\' to quit. : ");
+      user = keyboard.nextLine() + " ";
       
       System.out.println ("Decimal equivalent: " + question.convertBin2Dec());
     }
