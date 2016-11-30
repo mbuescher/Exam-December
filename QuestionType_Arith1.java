@@ -27,14 +27,14 @@ public class QuestionType_Arith1
   // Accessor Methods
   // --------------------------------------------------------------
   /** Returns the question as a String.
-    * @return the answer as a String.
+    * @return the question as a String.
     */
   public String getQuestion ()
   {
     return questionString;
   }
-  /** Returns the binary representation of a number.
-    * @return an integer made up of ones and zeros.
+  /** Returns the answer to the question.
+    * @return the answer to the question.
     */
   public String getAnswer ()
   {
@@ -59,11 +59,11 @@ public class QuestionType_Arith1
       case 3:
         setAddIntReal(); break;
       case 4:
-        setOOp1(); break;
+        setOrdOp1(); break;
       case 5:
-        setOOp2(); break;
+        setOrdOp2(); break;
       case 6:
-        setOOp3(); break;
+        setOrdOp3(); break;
     }
   }
   
@@ -104,14 +104,14 @@ public class QuestionType_Arith1
   private void setAddIntReal ()
   {
     int a = (int)(Math.random() * 50) - 15;
-    double b = (Math.random() * 10) + 1;
+    double b = (int)(Math.random() * 101)/10.0 + 1;
     
     questionString = a + " + " + b + " =  ??? ";
     answerString = "" + (a + b);
   }
 
   // Order of Operations - first of many
-  private void setOOp1 ()
+  private void setOrdOp1 ()
   {
     int a = (int)(Math.random() * 10) + 1;
     int b = (int)(Math.random() * 10) + 1;
@@ -122,7 +122,7 @@ public class QuestionType_Arith1
   }
   
   // Order of Operations - version 2
-  private void setOOp2 ()
+  private void setOrdOp2 ()
   {
     int a = (int)(Math.random() * 80) + 1;
     int b = (int)(Math.random() * 10) + 1;
@@ -133,7 +133,7 @@ public class QuestionType_Arith1
   }
   
   // Order of Operations - version 3
-  private void setOOp3 ()
+  private void setOrdOp3 ()
   {
     int a = (int)(Math.random() * 20) + 1;
     int b = (int)(Math.random() * 80) + 1;
